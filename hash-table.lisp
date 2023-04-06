@@ -13,8 +13,8 @@
   (pprint-logical-block (stream nil)
     (print-unreadable-object (hash-table stream :type t :identity t)
       (format stream ":TEST ~S :COUNT ~D"
-              (hash-table-count hash-table)
-              (hash-table-test hash-table))
+              (hash-table-test hash-table)
+              (hash-table-count hash-table))
       (when *print-hash-table*
         (let ((count 0))
           (unless (zerop (hash-table-count hash-table))
