@@ -23,6 +23,7 @@
             (block print
               (maphash (lambda (key value)
                          (when (and (boundp '*print-length*)
+                                    (realp *print-length*)
                                     (<= *print-length* count))
                            (write-string "..." stream)
                            (pprint-newline :mandatory stream)

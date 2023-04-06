@@ -30,7 +30,7 @@ CL-USER> (aops:rand* 'single-float '(5 5))
    {1007E0230F}>
 CL-USER> (setq *print-length* 10)
 10
-CL-USER> (alexandria:plist-hash-table (iota 100))
+CL-USER> (alexandria:plist-hash-table (alexandria:iota 100))
 #<HASH-TABLE :TEST 50 :COUNT EQL
   0                 =>  1
   2                 =>  3
