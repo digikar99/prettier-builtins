@@ -3,7 +3,7 @@
 (defun pretty-print-number (stream arg colon-modifier-p at-modifier-p)
   (declare (ignore colon-modifier-p at-modifier-p))
   (unless (typep arg 'number)
-    (return-from pretty-print-number (print-object arg stream)))
+    (return-from pretty-print-number (write arg :stream stream :pretty t)))
   (let ((number arg))
     (if (or (>= (abs number) 100) (< (abs number) 0.001))
         (format stream
